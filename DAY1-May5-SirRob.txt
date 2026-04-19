@@ -75,7 +75,7 @@ WARNING: IF YOU SEE AMBER/ORANGE= NEEDS FIXING!!!
 Trunk Ports: switch to switch:
 TAAS/BABA:
 config t
-Int Range fa0/10-12
+Int Range fa0/10-
  ! shutdown
  no shutdown
  switchport trunk Encap Dot1Q
@@ -87,7 +87,7 @@ CCNPSkillsNow: Etherchannel with LinkAggregationControlProtocol:
 WARNING: THREE CABLES IS BETTER THAN ONE!
 @taas/BABA:
 config t
-Int Range fa0/10-12
+Int Range fa0/10-
  channel-group 1 mode active
  channel-protocol Lacp
  do sh etherchannel summary
@@ -288,9 +288,9 @@ configure terminal
  destination-pattern 11..
  session target ipv4:10.11.100.8
  codec g711ULAW
-  !dial-peer voice 12 Voip
-  !destination-pattern 12..
-  !session target ipv4:10.12.100.8
+  !dial-peer voice  Voip
+  !destination-pattern ..
+  !session target ipv4:10..100.8
   !codec g711ULAW
 dial-peer voice 21 Voip
  destination-pattern 21..
@@ -437,7 +437,7 @@ config t
 username admin privilege 15 secret pass
 ip domain-name rivanit.com
 crypto key generate rsa
-!i type mo 1024 WAG 512 na default kc di ako bobo
+!i type mo 1024 WAG 5 na default kc di ako bobo
 ip ssh version 2
 
  !!!STATIC ROUTING FOR MININUM WAGERS: 645php/day
@@ -516,7 +516,7 @@ application
   paramspace english location flash:
   param second-greeting-time 60
   param max-time-vm-retry 2
-  param voice-mail 1234
+  param voice-mail 34
   param max-time-call-retry 700
   param aa-pilot ~~69
  service rivanqueue flash:app-b-acd-3.0.0.2.tcl
@@ -623,7 +623,7 @@ conf t
   allow-connections h323 to sip    
   allow-connections sip to h323
   allow-connections sip to sip
-  supplementary-service h450.12
+  supplementary-service h450.
  sip
    bind control source-interface fa0/0
    bind media source-interface fa0/0
@@ -632,8 +632,8 @@ conf t
  voice register global
   mode cme
   source-address 10.~~.100.8 port 5060
-  max-dn 12
-  max-pool 12
+  max-dn 
+  max-pool 
   authenticate register
   create profile sync
  voice register dn 1
