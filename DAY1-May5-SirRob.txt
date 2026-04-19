@@ -131,11 +131,11 @@ config t
 vlan 10
    name WIFIVLAN
 vlan 50
-   name IPCCTVLAN
+   name IPCameraVLAN
 vlan 69
-   name DELETEME
+   name NOC
 vlan 70
-    name SELLME
+    name SOC
 vlan 71
     name HR
 vlan 100
@@ -250,7 +250,7 @@ ephone-dn 8
 ephone-dn 10
  number 1298
 Ephone 1
-  Mac-address cafe.face.baba
+  Mac-address ccd8.c1fb.161b
   type 8945
   button 1:8 2:7 3:6 4:5
   restart
